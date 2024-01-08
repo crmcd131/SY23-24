@@ -2,3 +2,4 @@
 Software and App Design <br>
 1/4/24 initial setup
 1/5/24 Updated from computer
+1/8/24 Monday Update
