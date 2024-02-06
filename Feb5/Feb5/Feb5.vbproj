@@ -74,6 +74,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Clicker.vb" />
+    <Compile Include="clickercontrol.Designer.vb">
+      <DependentUpon>clickercontrol.vb</DependentUpon>
+    </Compile>
+    <Compile Include="clickercontrol.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
     <Compile Include="Form1.vb">
       <SubType>Form</SubType>
     </Compile>
@@ -98,6 +104,9 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="clickercontrol.resx">
+      <DependentUpon>clickercontrol.vb</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.vb</DependentUpon>
     </EmbeddedResource>
