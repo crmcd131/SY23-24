@@ -28,6 +28,15 @@ Partial Class Form1
         Me.Button3 = New System.Windows.Forms.Button()
         Me.Button4 = New System.Windows.Forms.Button()
         Me.Label1 = New System.Windows.Forms.Label()
+        Me.Button5 = New System.Windows.Forms.Button()
+        Me.dollarcoin = New System.Windows.Forms.PictureBox()
+        Me.quartercoin = New System.Windows.Forms.PictureBox()
+        Me.dimecoin = New System.Windows.Forms.PictureBox()
+        Me.nickelcoin = New System.Windows.Forms.PictureBox()
+        CType(Me.dollarcoin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.quartercoin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.dimecoin, System.ComponentModel.ISupportInitialize).BeginInit()
+        CType(Me.nickelcoin, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
         '
         'Button1
@@ -80,11 +89,70 @@ Partial Class Form1
         Me.Label1.TabIndex = 4
         Me.Label1.Text = "Label1"
         '
+        'Button5
+        '
+        Me.Button5.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Button5.Location = New System.Drawing.Point(275, 260)
+        Me.Button5.Name = "Button5"
+        Me.Button5.Size = New System.Drawing.Size(119, 94)
+        Me.Button5.TabIndex = 5
+        Me.Button5.Text = "Coin Return"
+        Me.Button5.UseVisualStyleBackColor = True
+        '
+        'dollarcoin
+        '
+        Me.dollarcoin.Image = CType(resources.GetObject("dollarcoin.Image"), System.Drawing.Image)
+        Me.dollarcoin.Location = New System.Drawing.Point(675, 33)
+        Me.dollarcoin.Name = "dollarcoin"
+        Me.dollarcoin.Size = New System.Drawing.Size(94, 91)
+        Me.dollarcoin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.dollarcoin.TabIndex = 6
+        Me.dollarcoin.TabStop = False
+        Me.dollarcoin.Visible = False
+        '
+        'quartercoin
+        '
+        Me.quartercoin.Image = CType(resources.GetObject("quartercoin.Image"), System.Drawing.Image)
+        Me.quartercoin.Location = New System.Drawing.Point(675, 130)
+        Me.quartercoin.Name = "quartercoin"
+        Me.quartercoin.Size = New System.Drawing.Size(94, 91)
+        Me.quartercoin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.quartercoin.TabIndex = 7
+        Me.quartercoin.TabStop = False
+        Me.quartercoin.Visible = False
+        '
+        'dimecoin
+        '
+        Me.dimecoin.Image = CType(resources.GetObject("dimecoin.Image"), System.Drawing.Image)
+        Me.dimecoin.Location = New System.Drawing.Point(675, 227)
+        Me.dimecoin.Name = "dimecoin"
+        Me.dimecoin.Size = New System.Drawing.Size(94, 91)
+        Me.dimecoin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.dimecoin.TabIndex = 8
+        Me.dimecoin.TabStop = False
+        Me.dimecoin.Visible = False
+        '
+        'nickelcoin
+        '
+        Me.nickelcoin.Image = CType(resources.GetObject("nickelcoin.Image"), System.Drawing.Image)
+        Me.nickelcoin.Location = New System.Drawing.Point(675, 324)
+        Me.nickelcoin.Name = "nickelcoin"
+        Me.nickelcoin.Size = New System.Drawing.Size(94, 91)
+        Me.nickelcoin.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom
+        Me.nickelcoin.TabIndex = 9
+        Me.nickelcoin.TabStop = False
+        Me.nickelcoin.Visible = False
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
         Me.ClientSize = New System.Drawing.Size(800, 450)
+        Me.Controls.Add(Me.nickelcoin)
+        Me.Controls.Add(Me.dimecoin)
+        Me.Controls.Add(Me.quartercoin)
+        Me.Controls.Add(Me.dollarcoin)
+        Me.Controls.Add(Me.Button5)
         Me.Controls.Add(Me.Label1)
         Me.Controls.Add(Me.Button4)
         Me.Controls.Add(Me.Button3)
@@ -92,6 +160,10 @@ Partial Class Form1
         Me.Controls.Add(Me.Button1)
         Me.Name = "Form1"
         Me.Text = "Form1"
+        CType(Me.dollarcoin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.quartercoin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.dimecoin, System.ComponentModel.ISupportInitialize).EndInit()
+        CType(Me.nickelcoin, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
         Me.PerformLayout()
 
@@ -102,4 +174,9 @@ Partial Class Form1
     Friend WithEvents Button3 As Button
     Friend WithEvents Button4 As Button
     Friend WithEvents Label1 As Label
+    Friend WithEvents Button5 As Button
+    Friend WithEvents dollarcoin As PictureBox
+    Friend WithEvents quartercoin As PictureBox
+    Friend WithEvents dimecoin As PictureBox
+    Friend WithEvents nickelcoin As PictureBox
 End Class
