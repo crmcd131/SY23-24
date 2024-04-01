@@ -152,7 +152,7 @@ Partial Class Form1
         '
         Me.lstCartItems.FormattingEnabled = True
         Me.lstCartItems.ItemHeight = 16
-        Me.lstCartItems.Location = New System.Drawing.Point(439, 242)
+        Me.lstCartItems.Location = New System.Drawing.Point(431, 128)
         Me.lstCartItems.Name = "lstCartItems"
         Me.lstCartItems.Size = New System.Drawing.Size(216, 196)
         Me.lstCartItems.TabIndex = 10
@@ -355,16 +355,16 @@ Partial Class Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(8.0!, 16.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(1078, 573)
-        Me.Controls.Add(Me.lstCartItems)
+        Me.ClientSize = New System.Drawing.Size(1078, 453)
         Me.Controls.Add(Me.pictureBoxBest5)
         Me.Controls.Add(Me.pictureBoxBest4)
-        Me.Controls.Add(Me.btnbuybest4)
         Me.Controls.Add(Me.pictureBoxBest3)
-        Me.Controls.Add(Me.btnBuyBest5)
-        Me.Controls.Add(Me.btnBuyBest3)
         Me.Controls.Add(Me.pictureBoxBest2)
         Me.Controls.Add(Me.pictureBoxBest1)
+        Me.Controls.Add(Me.lstCartItems)
+        Me.Controls.Add(Me.btnbuybest4)
+        Me.Controls.Add(Me.btnBuyBest5)
+        Me.Controls.Add(Me.btnBuyBest3)
         Me.Controls.Add(Me.btnBuyBest2)
         Me.Controls.Add(Me.btnBuyBest1)
         Me.Controls.Add(Me.btnOriginalView)

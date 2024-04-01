@@ -1,6 +1,5 @@
 ﻿Public Class Form1
     Private Sub Form1_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        ' Terms and conditions message with bullet points
         Dim message As String = "Terms and Conditions:" & vbCrLf & vbCrLf &
                                 "1: By accessing or using this website, you agree to be bound by these terms and conditions of use. If you do not agree with any of these terms, you are prohibited from using or accessing this site." & vbCrLf &
                                 "2: The content of this website is for general information purposes only and is subject to change without notice." & vbCrLf &
@@ -42,7 +41,6 @@
             Price = itemPrice
         End Sub
 
-        ' This function returns the item's name and price as a string.
         Public Overrides Function ToString() As String
             Return $"{Name} - ${Price}"
         End Function
@@ -52,7 +50,6 @@
 
 
     Private Sub btnAddToCart_Click(sender As Object, e As EventArgs) Handles btnAddToCart.Click
-        ' Example item and price to add
         Dim newItem As New CartItem("Sunglasses Holders", 2.87D)
 
         ShoppingCart.Add(newItem)
@@ -96,34 +93,26 @@
 
 
     Private Sub btnViewCart_Click(sender As Object, e As EventArgs) Handles btnViewCart.Click
-        ' Toggle visibility
         lstCartItems.Visible = Not lstCartItems.Visible
 
-        ' If we are making the cart visible, update the items displayed
         If lstCartItems.Visible Then
-            ' Clear current items in the ListBox
             lstCartItems.Items.Clear()
 
             Dim totalAmount As Decimal = 0
 
-            ' Add each item in the shopping cart to the ListBox and calculate the total amount
             For Each item As CartItem In ShoppingCart
                 lstCartItems.Items.Add(item.ToString())
                 totalAmount += item.Price
             Next
 
-            ' Add a blank line
             lstCartItems.Items.Add("")
 
-            ' Display total amount separately
             lstCartItems.Items.Add($"Total: ${totalAmount}")
-            ' Add a blank line
             lstCartItems.Items.Add("Buy")
         End If
 
         Dim showItems As Boolean = Not lstCartItems.Visible
 
-        ' Regular items and buttons
         PBRegular1.Visible = showItems
         PBRegular2.Visible = showItems
         PBRegular3.Visible = showItems
@@ -136,7 +125,6 @@
         btnbuybest4.Visible = showItems
         btnBuyBest5.Visible = showItems
 
-        ' Best sellers and buttons
         pictureBoxBest1.Visible = showItems
         pictureBoxBest2.Visible = showItems
         pictureBoxBest3.Visible = showItems
@@ -149,13 +137,9 @@
         btnbuybest4.Visible = showItems
         btnBuyBest5.Visible = showItems
 
-        ' Update the items displayed in the cart, if it's becoming visible
         If lstCartItems.Visible Then
-            ' Clear current items in the ListBox
             lstCartItems.Items.Clear()
 
-            ' Update your cart items display here
-            ' For example, reload the items from your ShoppingCart list
             For Each item As CartItem In ShoppingCart
                 lstCartItems.Items.Add(item.ToString())
             Next
@@ -163,11 +147,8 @@
     End Sub
 
     Private Sub lstCartItems_Click(sender As Object, e As EventArgs) Handles lstCartItems.Click
-        ' Check if the selected item is the "Buy" button
         If lstCartItems.SelectedItem IsNot Nothing AndAlso lstCartItems.SelectedItem.ToString() = "Buy" Then
-            ' Remove all items from the ListBox
             lstCartItems.Items.Clear()
-            ' Clear the shopping cart
             ShoppingCart.Clear()
         End If
     End Sub
