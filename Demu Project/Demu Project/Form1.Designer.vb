@@ -152,7 +152,7 @@ Partial Class Form1
         '
         Me.lstCartItems.FormattingEnabled = True
         Me.lstCartItems.ItemHeight = 16
-        Me.lstCartItems.Location = New System.Drawing.Point(431, 128)
+        Me.lstCartItems.Location = New System.Drawing.Point(485, 236)
         Me.lstCartItems.Name = "lstCartItems"
         Me.lstCartItems.Size = New System.Drawing.Size(216, 196)
         Me.lstCartItems.TabIndex = 10

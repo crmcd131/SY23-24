@@ -93,25 +93,12 @@
 
 
     Private Sub btnViewCart_Click(sender As Object, e As EventArgs) Handles btnViewCart.Click
-        lstCartItems.Visible = Not lstCartItems.Visible
+        ToggleVisibilityOfItems()
+        UpdateCartDisplay()
+    End Sub
 
-        If lstCartItems.Visible Then
-            lstCartItems.Items.Clear()
-
-            Dim totalAmount As Decimal = 0
-
-            For Each item As CartItem In ShoppingCart
-                lstCartItems.Items.Add(item.ToString())
-                totalAmount += item.Price
-            Next
-
-            lstCartItems.Items.Add("")
-
-            lstCartItems.Items.Add($"Total: ${totalAmount}")
-            lstCartItems.Items.Add("Buy")
-        End If
-
-        Dim showItems As Boolean = Not lstCartItems.Visible
+    Private Sub ToggleVisibilityOfItems()
+        Dim showItems As Boolean = lstCartItems.Visible
 
         PBRegular1.Visible = showItems
         PBRegular2.Visible = showItems
@@ -119,11 +106,11 @@
         PBRegular4.Visible = showItems
         PBRegular5.Visible = showItems
 
-        btnBuyBest1.Visible = showItems
-        btnBuyBest2.Visible = showItems
-        btnBuyBest3.Visible = showItems
-        btnbuybest4.Visible = showItems
-        btnBuyBest5.Visible = showItems
+        btnAddToCart.Visible = showItems
+        btnAddTalkiShirt.Visible = showItems
+        btnAddBabyToy.Visible = showItems
+        btnAddEarbuds.Visible = showItems
+        btnAddWTFHat.Visible = showItems
 
         pictureBoxBest1.Visible = showItems
         pictureBoxBest2.Visible = showItems
@@ -136,15 +123,29 @@
         btnBuyBest3.Visible = showItems
         btnbuybest4.Visible = showItems
         btnBuyBest5.Visible = showItems
+        lstCartItems.Visible = Not lstCartItems.Visible
+    End Sub
 
+    Private Sub UpdateCartDisplay()
         If lstCartItems.Visible Then
             lstCartItems.Items.Clear()
 
+            Dim totalAmount As Decimal = 0
             For Each item As CartItem In ShoppingCart
                 lstCartItems.Items.Add(item.ToString())
+                totalAmount += item.Price
             Next
+
+            ' Now add the total and Buy option
+            If ShoppingCart.Count > 0 Then
+                lstCartItems.Items.Add($"Total: ${totalAmount.ToString("F2")}")
+                lstCartItems.Items.Add("Buy")
+            End If
         End If
     End Sub
+
+
+
 
     Private Sub lstCartItems_Click(sender As Object, e As EventArgs) Handles lstCartItems.Click
         If lstCartItems.SelectedItem IsNot Nothing AndAlso lstCartItems.SelectedItem.ToString() = "Buy" Then
@@ -152,10 +153,6 @@
             ShoppingCart.Clear()
         End If
     End Sub
-
-
-
-
 
     Private Sub btnBestSellers_Click(sender As Object, e As EventArgs) Handles btnBestSellers.Click
         PBRegular1.Visible = False
@@ -192,11 +189,11 @@
         PBRegular4.Visible = True
         PBRegular5.Visible = True
 
-        btnBuyBest1.Visible = True
-        btnBuyBest2.Visible = True
-        btnBuyBest3.Visible = True
-        btnbuybest4.Visible = True
-        btnBuyBest5.Visible = True
+        btnAddToCart.Visible = True
+        btnAddTalkiShirt.Visible = True
+        btnAddBabyToy.Visible = True
+        btnAddEarbuds.Visible = True
+        btnAddWTFHat.Visible = True
 
         pictureBoxBest1.Visible = False
         pictureBoxBest2.Visible = False
@@ -210,6 +207,8 @@
         btnbuybest4.Visible = False
         btnBuyBest5.Visible = False
     End Sub
+
+
 
     Private Sub btnBuyBest1_Click(sender As Object, e As EventArgs) Handles btnBuyBest1.Click
         Dim newItem As New CartItem("Quilted Waterproof Mattress", 9.88D)
