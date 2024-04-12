@@ -79,3 +79,8 @@ footer {
     bottom: 0;
     width: 100%;
 }
+
+#message {
+    color: green;
+    font-weight: bold;
+}
