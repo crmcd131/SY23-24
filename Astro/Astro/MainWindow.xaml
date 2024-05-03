@@ -1,0 +1,17 @@
+﻿<Window x:Class="MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Astro"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <Calendar x:Name="Cal1" HorizontalAlignment="Left" Margin="331,169,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="Button1" Content="Button" HorizontalAlignment="Left" Margin="160,142,0,0" VerticalAlignment="Top" Click="Button1_Click"/>
+        <Label x:Name="Label1" Content="Label" HorizontalAlignment="Left" Margin="180,282,0,0" VerticalAlignment="Top"/>
+        <Image x:Name="aquarius" HorizontalAlignment="Left" Height="100" Margin="604,195,0,0" VerticalAlignment="Top" Width="100" Source="/aquarius.png" IsEnabled="False" Visibility="Collapsed"/>
+        <Image x:Name="pisces" HorizontalAlignment="Left" Height="100" Margin="604,195,0,0" VerticalAlignment="Top" Width="100" Source="/pisces.png" IsEnabled="False" Visibility="Collapsed"/>
+        <Image x:Name="aries" HorizontalAlignment="Left" Height="100" Margin="624,186,0,0" VerticalAlignment="Top" Width="100" Source="/aries.png"/>
+    </Grid>
+</Window>

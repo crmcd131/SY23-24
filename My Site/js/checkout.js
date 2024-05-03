@@ -20,7 +20,6 @@ function removeFromCart(index) {
 }
 
 function placeOrder() {
-    sessionStorage.removeItem('cart'); // Clear cart after placing an order
-    alert('Order placed!');
-    window.location = 'thank-you.html'; // Redirect to thank-you page
+    sessionStorage.removeItem('cart'); // Clear the cart
+    window.location = 'thank-you.html'; // Redirect to the thank-you page
 }
